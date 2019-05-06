@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>Records using Multi-Dimensional Array</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var personnel =[]; //empty Array
+
+      //assign values FIRST Records
+      personnel[0] = [];  //indication for multi-array
+      personnel[0][0]=Naziia;
+      personnel[0][1]=[27];
+      personnel[0][2]="1432 Main str, Raleigh";
+
+      //assign values Second Records
+      personnel[1] = [];  //indication for multi-array
+      personnel[1][0]=Sveta;
+      personnel[1][1]=[42];
+      personnel[1][2]="485 Hollsborough str, Raleigh";
+
+      //assign values Third Records
+      personnel[2] = [];  //indication for multi-array
+      personnel[2][0]=Josh;
+      personnel[2][1]=[31];
+      personnel[2][2]="1242 West Academy str, Raleigh";
+
+      document.write("Name: " + personnel[0][0] + "<br/>");
+      document.write("Age: " + personnel[0][1] + "<br/>");
+      document.write("Address: " + personnel[0][2] + "<br/>");
+
+      document.write("Second Record........</br>");
+      document.write("Name: " + personnel[1][0] + "<br/>");
+      document.write("Age: " + personnel[1][1] + "<br/>");
+      document.write("Address: " + personnel[1][2] + "<br/>");
+      document.write("All Records:----------------------------  "<br/>");
+      //alert(personnel.length);
+
+      for(var row=0; row<personnel.length; row++){
+        for(var col=0; col<personnel.length; col++){
+          document.write("Record: " + personnel[row][col] + "<br/>");
+      }
+    }
+
+    </script>
+  </body>
+</html>

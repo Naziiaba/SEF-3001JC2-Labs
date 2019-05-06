@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+      //Global variable:
+
+      authorName = "Naziia Travels";
+      ProgramObjective = "Demo for functions convert To Centigrade";
+      var theTimes = new Date();
+
+      function ProgramInfo(){                 // Since the variable are GLOBAl we dont need to specify them as function parameters.
+        document.write("Welcome to our Code <br/>");
+        document.write("Today: " + theTimes + "<br/>");
+        document.write("Written By: " + theTimes + "<br/>");
+        document.write("Objective: " + ProgramObjective + "<br/>");
+      }
+
+      ProgramInfo ();                       // function call and function declaration should match.
+
+
+        function convertToCentigrade(degFahren){
+          var degCent = 5/9 * (degFahren-32);
+          return degCent;
+        } //convertToCentigrade
+
+        //define any global scope Array
+          var degFahren = [212, 32, -459,15];
+          //call function
+          //alert(convertToCentigrade(degFahren));
+        for(var loopcounter=0; loopcounter < degFahren.length; loopcounter++) {
+          document.write("Value " + loopcounter + " ( " + degFahren[loopcounter] + " ) was " +
+                            convertToCentigrade(degFahren[loopcounter]) +
+                          " degree Fahrenheit. <br/>"
+                        )
+                    }
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
