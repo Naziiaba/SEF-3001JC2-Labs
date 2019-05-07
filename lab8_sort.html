@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      //array
+      var myShopping= ["Eggs", "Milk", "Potatoes", "Cereal", "Banana"];
+      //give me the size of this array
+      alert(myShopping.length);
+
+      //iterate for me all the items in myShopping Array
+
+      for(var item = 0; item < myShopping.length; item++) {
+        document.write(myShopping[item] + "<br/>");
+      }  //For loop
+
+      var ord=prompt("Enter 1 for alphabetical order, " +" and -1 for reverse order" , 1); //This last one is a default 1 for popup window.
+
+      if(ord == 1){
+        myShopping.sort();
+        document.write("New List1: <br />");
+        document.write(myShopping.join("<br />")); //
+
+      } else if (ord == -1){
+        myShopping.sort();
+        myShopping.reverse();
+        document.write("New List2:");
+        document.write(myShopping.join("<br />"));
+
+      } else {
+        document.write("No List and No sorting: Due to Invalid Selection");
+
+      }//
+
+    </script>
+  </body>
+</html>

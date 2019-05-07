@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function createPerson(FN, LN) {
+
+        return {
+                firstName  : FN,
+                lastName   : LN,
+                getFullName: function() {
+                  return this.firstName + " " +this.lastName;
+                },
+                greet: function(person){
+                  alert("Hello there! " + person.getFullName() + ".I am " + this.getFullName()
+                        );
+                }
+        }; //return for above function
+      }  //createPerson
+
+
+      var johnDoe =createPerson("John", "Doe");
+      var janeDoe =createPerson("Jane", "Doe");
+      var me = createPerson("Naziia", "Travels");
+
+      johnDoe.greet(janeDoe);
+      janeDoe.greet(me);
+
+      //let me greet johnDoe
+      me.greet(johnDoe);
+    </script>
+  </body>
+</html>
