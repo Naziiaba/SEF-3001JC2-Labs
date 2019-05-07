@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var values = prompt("Please enter a set of comma separated values"
+      "Apples, Oranges, Bananas");
+      function splitAndReverseText(csv) {
+        var parts = csv.split(","); create an Array
+
+        //give me the size of this Array
+        alert(parts.length);
+
+        //iterate for me all the items in myShopping Array
+        for(var items=0; item<parts.length; item++) {
+          document.write(parts[item] + "<br/>");
+        }   //  for loop
+      } //splitAndReverseText
+
+      document.write("New List: " + "<br />");
+      parts.sort();
+      document.write("<br /> New List: " + "<br />");
+      parts.sort();
+      parts.reverse();
+      document.write("New List: " + "<br />");
+    </script>
+
+  </body>
+</html>
