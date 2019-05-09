@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript" src=js/lab12_regularExp2.js>
+
+    </script>
+    <script type="text/javascript">
+
+      //For Postal code validation
+
+        var postalCode = prompt("Enter a postal code.","");
+        if (isValidPostalCode(postalCode)) {
+          alert("Valid Postal Code: " + postalCode);
+        }
+        else {
+          alert("Invalid Postal Code: " + postalCode);
+        }   //if statement
+
+
+      //For email validation
+
+      var email = prompt("Enter an email address: ","");
+
+      if (isValidEmail (email)) {
+        alert("Valid email address: " + email);
+      }
+      else {
+        alert("Invalid email address: " + email);
+      }   //if statement
+
+
+      //For Phone number validation
+
+      var phone = prompt("Enter a phone number: ","");
+
+      if (isValidPhone (phone)) {
+        alert("Valid phone number: " + phone);
+      }
+      else {
+        alert("Invalid phone number: " + phone);
+      }   //if statement
+
+      //For SSN number validation
+
+      var ssn = prompt("Enter SSN number: ","");
+
+      if (isValidSSN (ssn)) {
+        alert("Valid SSN number: " + ssn);
+      }
+      else {
+        alert("Invalid SSN number: " + ssn);
+      }   //if statement
+
+    </script>
+  </body>
+</html>

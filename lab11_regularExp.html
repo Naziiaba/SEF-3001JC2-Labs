@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var input = prompt("Enter a pass phrase.", "");
+        function isValid(text){
+          var myRegExp = /[^a-z\d] /i;     // \d=digit  /i -case-insensitive  ^ means NOT
+          return !(myRegExp.test(text));
+        }  //isValid
+
+        if(isValid(input))  {
+          alert("Your passphrase contains only valid characters.");
+
+        }
+        else {
+          alert("Your passphrase contains one or more invalid characters.");
+        }
+    </script>
+
+  </body>
+</html>

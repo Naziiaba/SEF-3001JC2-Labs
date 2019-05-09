@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Date Clock</title>
+  </head>
+  <body>
+    <h1>My Clock</h1>
+    <img src="images/clock.jpg" alt="My Clock" id="myclock" title="My Clock" width="300" height="300">
+    <div id="output"></div>
+    <script type="text/javascript">
+
+    function updateTime() {
+      var myDate = new Date();
+      //alert(myDate);
+      //document.write(myDate);
+      document.getElementById("output").innerHTML=
+      myDate.toLocaleString();
+
+    }  //updateTime function
+
+    //call the function
+    setInterval(updateTime, 1000);
+    </script>
+
+  </body>
+</html>
