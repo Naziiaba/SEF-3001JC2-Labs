@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TTimer</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      function ShowClock() {
+        alert("I am at ShowClick()");
+      }  //ShowClick()
+
+      var the_time_is = new Date;
+      var the_minute = the_time_is.getMinutes();
+      var the_hour = the_time_is.getHours();
+      var the_second = the_time_is.getSeconds();
+
+      function StopClock() {
+        alert("I am at StopClick()");
+      }  //StopClick()
+     </script>
+
+
+
+     <form name="myForm">
+       <b> The time is: </b>
+       <input name="displayTime" type="text" size="8"><br/>
+       <input name="StartTime" type="button"
+              value="Start Timer" size="15" onClick="ShowClock();">
+
+      <input name="StopTime" type="button"
+              value="Stop Timer" size="15" onClick="ShowClock();">
+
+      </form>
+  </body>
+</html>
