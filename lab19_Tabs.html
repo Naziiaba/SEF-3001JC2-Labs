@@ -16,9 +16,21 @@
 
       <script type="text/javascript">
         function handleEvent(e) {
-
-
+          var target = evt.getTarget(e);
+          switch (e.type) {
+            case "mouseover":
+                if (target.className == "tabStrip-tab") {
+                  target.className = "tabStrip-tab-hover";
+                }
+                break;
+            case "mouseout":
+                if (target.className == "tabStrip-tab") {
+                  target.className = "tabStrip-tab-hover";
+                }
+                break;
+          }
         }    // handleEvent
+
       </script>
   </body>
 </html>
