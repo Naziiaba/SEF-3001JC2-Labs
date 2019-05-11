@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function geoSuccess(position) {
+        var coordinates = position.coordinates ;
+        var latitude = coordinates .latitude;
+        var longtitude = coordinates .longtitude;
+
+
+        var message = "You are at " + latitude + " , " + longtitude;
+        alert(message);
+      } //geoSuccess
+
+      function geoError(errorObj) {
+        alert(errorObj.message);
+      }//geoError
+// calls
+
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+    </script>
+  </body>
+</html>
