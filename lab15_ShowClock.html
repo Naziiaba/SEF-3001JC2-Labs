@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TTimer</title>
+    <title>Timer</title>
   </head>
   <body>
 
@@ -16,19 +16,30 @@
             var the_hour = the_time_is.getHours();
             var the_second = the_time_is.getSeconds();
 
-        if (the_minute < 10 ) {
-          the_minute="0" + the_minute;
-        }
+            if (the_minute < 10 ) {
+              the_minute="0" + the_minute;
+            }
 
-        if (the_hour < 10 ) {
-          the_hour="0" + the_hour;
-        }
+            if (the_hour < 10 ) {
+              the_hour="0" + the_hour;
+            }
 
-        if (the_second < 10 ) {
-          the_second="0" + the_second;
-        }
+            if (the_second < 10 ) {
+              the_second="0" + the_second;
+            }
 
-      }  //StopClick()
+
+            document.myForm.displayTime.value = the_hour + ":"  + the_minute + ":" + the_second;
+            ClockID = setTimeout("ShowClock()", 1000);
+
+        }  //ShowClick()
+
+          function StopClock() {
+            //alert("I am at StopClick()");
+            clearTimeout(ClockID);
+
+    }//StopClick()
+
      </script>
 
 
@@ -36,6 +47,7 @@
      <form name="myForm">
        <b> The time is: </b>
        <input name="displayTime" type="text" size="8"><br/>
+
        <input name="StartTime" type="button"
               value="Start Timer" size="15" onClick="ShowClock();">
 
