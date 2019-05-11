@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #divAdvert {
+        position: absolute;
+        font: 28px Arial;
+        top: 4px;
+        left: 0px;
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="divAdvert">
+      Welcome to USA! The Land of Freedom.
+      <img src="images/usa.jpg" width="300" height="300" alt="My Image"/>
+
+    </div>
+
+    <script>
+    var switchDirection = false;
+
+    function doAnimation() {
+      var divAdvert =document.getElementById("divAdvert");
+      var currentLeft = divAdvert.offsetLeft;
+      var newLocation;
+
+
+    if (!switchDirection) {
+        newLocation = currentLeft + 2;
+        //alert(newLocation);  //it's just to test if it is working.
+
+                  if (currentLeft >= 300) {
+                      switchDirection = true;
+                      } //inner if statement
+
+                    }   else {
+
+              newLocation = currentLeft - 2;
+                  if (currentLeft <= 0) {
+                        switchDirection = false;
+                    } //inner if statement
+                  }//ELSE statement
+
+        divAdvert.style.left = newLocation + "px";
+
+      }  //doAnimation
+      setInterval(doAnimation, 50);
+
+    </script>
+  </body>
+</html>

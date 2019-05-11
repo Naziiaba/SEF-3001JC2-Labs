@@ -5,15 +5,27 @@
     <title></title>
   </head>
   <body>
-    <img src="" width="500" height="300" alt="My Image"/>
+    <img src="" width="300" height="300" alt="My Image"/>
+    <img src="images/clock.jpg" width="300" height="300" alt="My Image"/>
+    <img src="" width="300" height="300" alt="My Image"/>
+    <img src="" width="300" height="300" alt="My Image"/>
+    <img src="" width="300" height="300" alt="My Image"/>
+    <img src="" width="300" height="300" alt="My Image"/>
     <script type="text/javascript">
           var myImages = [
                           "images/raleigh.jpg",
                           "images/loveusa.jpg",
                           "images/kyrgyzstan.jpg",
+                          "images/seoul.jpg",
+                          "images/london.jpg"
                           ];
-          var imgIndex = prompt("Enter a number from 0 to 3" , "");
+          var imgIndex = prompt("Enter a number from 0 to 5" , "");
             document.images[0].src = myImages[imgIndex];
+            //document.images[1].src = myImages[imgIndex];  //the clock image - always.
+            document.images[2].src = myImages[imgIndex];
+            document.images[3].src = myImages[imgIndex];
+            document.images[4].src = myImages[imgIndex];
+            document.images[5].src = myImages[imgIndex];
             //image collections called images abd it is only one [0]
 
     </script>

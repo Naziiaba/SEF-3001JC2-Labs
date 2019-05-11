@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Swap</title>
+  </head>
+  <body>
+    <img src="images/flower.jpg" width="300" height="300" alt="My Image" onclick="changeImg(event)"/>
+    <img src="images/artclock1.jpg" width="300" height="300" alt="My Image" onmouseover="changeImg(event)" onmouseout="changeImg(event)"/>
+    <img src="images/sofa.jpg" width="300" height="300" alt="My Image" onclick="changeImg(event)" />
+    <img src="images/minim.jpg" width="300" height="300" alt="My Image" onclick="changeImg(event)"/>
+    <img src="images/leaf.jpg" width="300" height="300" alt="My Image" onclick="changeImg(event)"/>
+    <img src="images/usa.jpg" width="300" height="300" alt="My Image" onclick="changeImg(event)"/>
+
+    <script type="text/javascript">
+          var myImages = [
+                          "images/flower.jpg",
+                          "images/leaf.jpg",
+                          "images/sofa.jpg",
+                          "images/minim.jpg",
+                          "images/usa.jpg"
+                          ];
+          //var imgIndex = prompt("Enter a number from 0 to 5" , "");
+
+          function changeImg(e) {     //event we can write just "e", f.e.changeImg(e)
+            var el =e.target;
+            //alert(Math.random());         //e for event
+            var newImgNumber = Math.round(Math.random() * 5);
+
+            while (el.src.indexOf(myImages[newImgNumber]) != -1) {
+              newImgNumber = Math.round(Math.random() * 5);
+            }
+          el.src = myImages[newImgNumber];
+          } // changeImg(event)
+
+
+    </script>
+
+  </body>
+</html>
