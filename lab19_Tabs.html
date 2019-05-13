@@ -13,7 +13,8 @@
         border: 3px solid red;
       }
       .tabStrip-tab-click {
-
+        border:  2px solid blue;
+        padding:
       }
 
     </style>
@@ -47,7 +48,8 @@
                 if (target.className == "tabStrip-tab-hover") {
                   target.className = "tabStrip-tab-click";
                   var num = target.getAttribute("data-tab-number");
-                }   //alter num
+                  alert(num);
+                  showDescription(num);
                     break;
               }  //switch
             }    // handleEvent
@@ -61,7 +63,9 @@
 
 
       // calls
-evt
+evt.addListener(document,"mouseover",handleEvent);
+evt.addListener(document,"mouseout",handleEvent);
+evt.addListener(document,"click",handleEvent);
       </script>
   </body>
 </html>
