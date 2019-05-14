@@ -3,18 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Tabs using JS</title>
-    <style media="sreen">
+    <style media="screen">
       .tabStrip {
         background-color: green;
         padding: 3px;
         height: 22px;
       }
-      .tabStrip-tab div {
-        border: 3px solid red;
+      .tabStrip div {
+        float: left;
+        font: 14px arial;
+        cursor: pointer;
       }
+
+      .tabStrip-tab {
+      padding: 3px;
+      background-color: yellow;
+      }
+
+      .tabStrip-tab-hover {
+        border:  2px solid red;
+        background-color: white;
+        padding:2px;
+      }
+
       .tabStrip-tab-click {
-        border:  2px solid blue;
-        padding:
+        border:  2px solid black;
+        background-color: yellow;
+        padding:2px;
       }
 
     </style>
@@ -40,15 +55,16 @@
                 }
                 break;
             case "mouseout":
-                if (target.className == "tabStrip-tab") {
-                  target.className = "tabStrip-tab-hover";
+                if (target.className == "tabStrip-tab-hover") {
+                  target.className = "tabStrip-tab";
                 }
                 break;
             case "click":
                 if (target.className == "tabStrip-tab-hover") {
                   target.className = "tabStrip-tab-click";
                   var num = target.getAttribute("data-tab-number");
-                  alert(num);
+                }
+                  //alert(num);
                   showDescription(num);
                     break;
               }  //switch

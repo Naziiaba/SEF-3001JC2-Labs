@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drop to Zone</title>
+    <style media="screen">
+      .box {
+        width: 200px;
+        height: 100px;
+      }
+      .red {
+        background-color: white;
+      }
+      .drop-zone {
+        width: 300px;
+        padding: 20px;
+        border: 2px dashed orange;
+        margin:  25px 0 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div id= "test" class="box red" draggable="true">1</div>  -->
+    <div id= "test" class="box red" draggable="true">
+
+      <table>
+        <tr>
+            <td><img src="images/leaf.jpg" width="200" height="100" alt="My Image"></td>
+            <td><img src="images/minim.jpg" width="200" height="100" alt="My Image"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id= "dropZone" class="drop-zone">Drag and Drop here</div>
+    <div id= "dropStatus">3</div>
+
+<script type="text/javascript">
+      function dragDropHandler(e){
+         e.preventDefault();
+         //cancels the event if it is cancelable
+         //the default action will not occurs that belongs to the event.
+         if(e.type == "dragover") {
+            dropStatus.innerHTML="You are dragging over the drop zone";
+         } else {
+           dropStatus.innerHTML="You dropped something!";
+         } //if statement
+      } //dragDropHandler(e)
+
+var dropZone = document.getElementById("dropZone");
+var dropStatus = document.getElementById("dropStatus");
+
+//calls
+dropZone.addEventListener("dragover", dragDropHandler);
+dropZone.addEventListener("drop", dragDropHandler);
+</script>
+
+  </body>
+</html>
