@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Information Form</title>
+  </head>
+  <body>
+    <form name="form1" class="" action="https://www.waketech.edu/"   method="post"> Please enter the following details:
+      <p>
+        Name:<input type="text" name="txtName" value="">
+      </p>
+      <p>
+        Age:<input type="text" name="txtAge" value="">
+      </p>
+      <p>
+        Email:<input type="text" name="txtEmail" value="">
+      </p>
+
+      <p>
+          <input type="submit" name="btnCheckForm" value="Check Details">
+          <input type="reset" name="btnReset" value="Reset(Clear Form)">
+      </p>
+    </form>
+
+      <script type="text/javascript">
+        var myForm=document.form1;
+        function btnCheckForm(e){
+          var txtName=myForm.txtName;
+          var txtAge =myForm.txtAge;
+          var txtEmail =myForm.txtEmail;
+
+
+        }  //btnCheckFormClick
+
+      </script>
+  </body>
+</html>
