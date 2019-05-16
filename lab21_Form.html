@@ -21,6 +21,8 @@
             <input type="reset" name="btnReset" value="Reset (Clear Form)">
          </p>
       </form>
+      
+      <script type="text/javascript" src=js/lab12_regularExp2.js></script>
       <script type="text/javascript">
          var myForm=document.form1;
          function btnCheckForm(e){
@@ -40,11 +42,13 @@
              } //inner1 IF
 
              //validate txtEmail
-             if() {
 
-                } else {
-
-             } //inner2 if
+             if (isValidEmail (txtEmail)) {
+               alert("Valid email address: " + email);
+             }
+             else {
+               alert("Invalid email address: " + email);
+             }  //inner2 if
 
            }else {
              alert("Thank you for completing the form " + txtName.value);
