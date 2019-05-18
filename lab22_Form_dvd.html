@@ -18,6 +18,88 @@
           <label for="chkBluRay">Blu Ray</label>
           <input type="checkbox" name="chkBluRay" id="chkBluRay" value="Blu Ray">
         </p>
+        <p>
+          Select the processor speed you require.
+        </p>
+        <p>
+          <input type="radio" name="radCpuSpeed"  value="3.2ghz" checked>
+          <label for="radCpuSpeed"> 3.2 ghz</label>
+        </p>
+        <p>
+          <input type="radio" name="radCpuSpeed"  value="4.0ghz">
+          <label for="radCpuSpeed"> 4.0 ghz</label>
+        </p>
+        <p>
+           <input type="button" name="btnCheck" value="Check Form">
+           <input type="reset" name="btnReset" value="Reset (Clear Form)">
+        </p>
 
+        <script type="text/javascript">
+
+        var myForm = document.formDVD;
+
+
+        function getSelectedSpeedValue(){
+          var radios = myForm.radCpuSpeed;
+          // it means exactly this one:  document.formDVD.radCpuSpeed;
+
+        for (var index = 0; index < radios.length; index++) {    // array.length; index++)
+          if(radios[index].checked) {
+            return radios[index].value;
+          } //if statement
+        } //for statement
+
+
+        return "";
+      } //getSelectedSpeedValue
+
+      function findIndexOfSpeed(radio) {
+        var radios = myForm.radCpuSpeed;
+        for (var index = 0; index < radios.length; index++) {
+          if(radios[index]== radio) {
+            return index;
+          }// inner if
+        } //for
+        return -1;
+      }   //findIndexOfSpeed
+
+
+
+        function radCpuSpeedClick() {
+          var radIndex = findIndexOfSpeed(e.target);
+          if (radIndex == 1) {
+            e.preventDefault();
+            alert("Sorry that processor speed is not available");
+          }
+        }
+
+
+        function btncheckClick() {
+          var numberOfControls = myForm.length;
+          var compSpec = "Your chosen processor speed is ";
+          compSpec += getSelectedSpeedValue ();  //compSpec = compSpec + getSelectedSpeedValue ();
+          compSpec += "\nWith the following additional components:\n";
+
+
+          for (var index = 0; index < numberOfControls; index++ ){
+            var element = myForm[index];
+            if(element.type == "checkbox") {
+              if (element.checked) {
+                compSpec +=element.value + "\n";  // "\n" - means a new line.
+              } //inner if
+
+            } //if statement
+          } //for statement
+
+          alert(compSpec);
+        }  //btncheckClick()
+
+
+
+        for (var index =0; index < myForm.radCpuSpeed.length; index++) {
+          myForm.radCpuSpeed[index].addEventListener("click", radCpuSpeedClick);
+        }
+        myForm.btnCheck.addEventListener("click", btncheckClick);
+     </script>
   </body>
 </html>
